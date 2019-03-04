@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+</head>
+<body style="background-color:black">
+
+	<h1 style="text-align:center;color:white">
+
+	</h1>
+
+
+	<script>
+	$(document).ready(function(){
+		var  i=0;
+		var x = "GO GET SOME CS KNOWLEDGE JUDGES";
+		var y="<br><br>	You don't deserve our software";
+		function assholes(){
+		$("h1").html(x.substr(0,i)+"!");
+			if(i>=x.length){
+				setInterval(function(){
+					var z = $("h1").html();
+					if(z.includes(y)){
+						$("h1").html(x+"!");
+					}else{
+						$("h1").html($("h1").html()+y);
+					}
+				},700)
+
+				return;
+			}
+			i++;
+			setTimeout(assholes,100);
+		}
+		assholes();
+		console.log("Okk");
+	});
+	</script>
+
+</body>
+
+</html>
